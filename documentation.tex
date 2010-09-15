@@ -194,6 +194,205 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
+\subsection{man}
+\begin{singlespacing}
+allsdh lajsdk eir aldj cansjflasdj fowej fldjfa lvclachv adj lfj aljfdawje foajd ljalcv jldfj ladsjfa dlsjfladsjf lajf lwejladjv ladjv lasdjl adsfldsj flksdj ljdfld jflj flj asljd s
+\end{singlespacing}
+\newpage
+
+\subsection{cd}
+To move directories up and back use the following commands:
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{cd \ }} \qquad  \qquad \qquad returns you to your login directory
+\item{\bf{cd ..}} \qquad  \qquad \qquad moves you up one directory
+\item{\bf{cd /\ }} \qquad \qquad \qquad takes you to the entire system`s root directory
+\item{\bf{cd /home}} \qquad \qquad takes you to the home directory
+\item{\bf{cd /dir1/subdirfoo}} \qquad this absolute path would take you to subdirfoo
+\end{itemize}
+\end{doublespacing}
+
+\subsection{ls}
+\begin{singlespacing}
+"ls" lists the contents of a directory. To list the different informations of a directory use:
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{ls}} \qquad \qquad \qquad list the contents of your home directory
+\item{\bf{ls ..}} \qquad \qquad \qquad list the contents of the parent directory
+\item{\bf{ls /}} \qquad \qquad \qquad lists the contents of your root directory
+\item{\bf{ls -R}} \qquad \qquad \qquad includes the contents of the subdirectories
+\item{\bf{ls -l}} \qquad \qquad\qquad lists the contents with more informations
+\item{\bf{ls -a}} \qquad \qquad \qquad includes directories whose names start with a dot (.).
+\end{itemize}
+\end{doublespacing}
+
+\subsection{pwd}
+\begin{singlespacing}
+"Pwd" means "print working directory", it shows you the directory you are currently in. Normally pwd is just used by itself. But there are two options:
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{pwd -L}} \qquad display the logical current working directory.
+\item{\bf{pwd -P}} \qquad display the physical current working directory.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{mkdir}
+\begin{singlespacing}
+The "mkdir" (make directory) is used to make a new directory. There are a few options:
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{mkdir}} \qquad creates a new directory within the current directory
+\item{\bf{mkdir -p}} \qquad creates also all directories leading up to the given directory that do not exist already.
+\item{\bf{mkdir -v}} \qquad display each directory that mkdir creates.
+\item{\bf{mkdir -m}} \qquad Set the file permission bits of the newly-created directory to the specified mode value.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{touch}
+\begin{singlespacing}
+The {\bf touch} command changes certain dates for each file argument. By default, touch sets both the date of last file modification and the date of last file access to the current time.
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{touch}} \qquad sets the modification time of the fie to the present
+\item{\bf{touch -t}} \qquad specifies a particular time using this format:\newline
+\qquad [cc][yy][MM][dd]hhmm[.ss]. It changes the access and the modification time.
+\item{\bf{touch -a}} \qquad specifies the access time.
+\item{\bf{touch -m}} \qquad specifies the modification time.
+\item{\bf{touch -r}} \qquad for example: touch -r oldfile newfile \newline
+\qquad sets the access and modification time of "newfile" to that of "oldfile".
+\item{\bf{touch -f}} \qquad  attempt to force the update, even if the file permissions do not currently permit it. 
+\item{\bf{touch -c}} \qquad     does not create any files that do not already exist. Normally, touch creates such files.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{mv}
+"mv" (move files) either renames the file or moves it into an existing direcory.
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{mv oldname newname}} \qquad rename the file "oldname" into "newname"
+\item{\bf{mv a b}} \qquad moves the folder "a" into "b", if "b" is an existing directory
+\item{\bf{mv a ../}} \qquad moves "a" one directory up
+\item{\bf{mv a /documents/b}} \qquad moves "a" into "documents" and renames it to "b"
+\end{itemize}
+There are also a few different options for mv:
+\begin{itemize}
+\item{\bf{-i}} \qquad  Cause mv to write a prompt to standard error before moving a file that would overwrite an existing file.
+\item{\bf{-f}} \qquad Do not prompt for confirmation before overwriting the destination path.
+\item{\bf{-n}} \qquad Do not overwrite an existing file.
+\item{\bf{-v}} \qquad  Cause mv to be verbose, showing files after they are moved.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{cp}
+"cp" (copy) can be used to copy files or directories.
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{cp a b}} \qquad copies the file "a" to "b".
+\item{\bf{-a}} \qquad  Preserves structure and attributes of files
+           but not directory structure.
+\item{\bf{-f}} \qquad  If the destination file cannot be opened, remove it and create a
+           new file, without prompting for confirmation regardless of its permissions.
+\item{\bf{-p}} \qquad Cause cp to preserve the following attributes of each source file in the copy: modification time, access time, file flags, file mode,
+           user ID, and group ID, as allowed by permissions.  Access Control
+           Lists (ACLs) and Extended Attributes (EAs), including resource
+           forks, will also be preserved.
+\item{\bf{-R}} \qquad  If the source designates a directory, cp copies the directory and
+           the entire subtree connected at that point.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{rm}
+"rm" (remove) is used to remove files and directories from a filesystem. Options:
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{rm a}} \qquad removes the file "a", to remove more than just one file, just write: rm a b, to remove the file "a" and the file "b".
+\item{\bf{rm -i}} \qquad requests confirmation to delete the file.
+\item{\bf{rm -d}} \qquad  removes directories as well as other types of
+                 files.
+\item{\bf{rm -r}} \qquad removes directories recursively.
+\item{\bf{rm -P}} \qquad overwrites regular files before deleting them. 
+\end{itemize}
+\end{doublespacing}
+
+\subsection{cat}
+“cat“ (concatenate) reads one or more files and prints them to standard output.The operator \verb$ >$ can be used to combine multiple files into one.
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{cat a}} \qquad prints the file "a".
+\item{\bf{cat a b \verb$>$ c}} \qquad combines file a and b into c and prints it.
+\item{\bf{cat -e}} \qquad display non-printing characters, and display
+             a dollar sign at the end of each line.
+\item{\bf{cat -n}} \qquad number the output lines, starting at 1.
+\end{itemize}
+\end{doublespacing}
+\begin{singlespacing}
+
+\subsection{grep}
+Grep (global | regular expression | print) is a command line text search utility.The grep comand searches files or standard input globally for lines matching a given regular expression and prints them to the program`s standard output.
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{-c}} \qquad print a count of matching lines.
+\item{\bf{-v}} \qquad prints all lines which don`t contain the given word.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{less}
+\begin{singlespacing}
+Less is a terminal pager program on Unix, Windows and Unix-like systems used to view (but not change) the contents of a text flie one screen at a time. It is similar to "more", but has the extended capability of allowing both forward and backward navigation through the file.
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{less}}  \qquad prints the file.
+\item{\bf{less -N}}  \qquad shows line numbers.
+\item{\bf{less -g}}   \qquad   highlights just the current match of any searched string.
+When the file is printed:
+\item{\bf{Space bar}} \qquad next page.
+\item{\bf{b}} \qquad previous page.
+\item{\bf{/pattern}} search for pattern.
+\item{\bf{n}} go to next match.
+\item{\bf{N}} go to previous match.
+\end{itemize}
+\end{doublespacing}
+
+\subsection{wc}
+\begin{singlespacing}
+Wc (word count) reads either standard input or a list of files and generates one or more of the following statistis: number of bytes, number of words, and number of lines. If a list of files is provided, both individual file and total statistics follow.
+\end{singlespacing}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{wc}} \qquad first column: count of newlines, second column: number of words, third column: number of characters.
+\item{\bf{wc -l}} \qquad number of lines.
+\item{\bf{wc -c}} \qquad number of bytes
+\item{\bf{wc- m}} \qquad number of characters.
+\item{\bf{wc- -w}} \qquad number of words.
+\end{itemize}
+\end{doublespacing}
+\subsection{A list of usefull unix commands}
+\begin{doublespacing}
+\begin{itemize}
+\item{\bf{clear}} \qquad clear the display
+\item{\bf{head}} \qquad 	 display first lines of a file
+\item{\bf{kill}}	\qquad kill all running proesses with a given name
+\item{\bf{passwd}}	\qquad change your accounts password
+\item{\bf{ping}}	\qquad see if a host is online and responds
+\item{\bf{scp}}		\qquad copy files and folders securely to a remote machine
+\item{\bf{tail}}	\qquad display the last part of a file, mostly used for logs
+\item{\bf{tar}}		\qquad used for un- and compressing a file
+\item{\bf{tee}}		\qquad pipe fitting
+\item{\bf{top}}		\qquad display and update sorted information about processes
+\item{\bf{which}}	\qquad locate a program file in the users path
+\item{\bf{whoami}}	\qquad display effective user id
+\item{\bf{sort}}	\qquad sort lines of text files
+\item{\bf{du}}		\qquad disk usage
+\item{\bf{find}}	\qquad walk a file hierarchy
+\item{\bf{wget}}	\qquad downloading files
+\end{itemize}
+\end{doublespacing}
 
 % add your own remarks here by reusing the existing examples
 
@@ -386,141 +585,11 @@ math mode text:
 
 %=============================================================================
 \section{Ruby Programming}
-\subsection{man}
-\begin{singlespacing}
-allsdh lajsdk eir aldj cansjflasdj fowej fldjfa lvclachv adj lfj aljfdawje foajd ljalcv jldfj ladsjfa dlsjfladsjf lajf lwejladjv ladjv lasdjl adsfldsj flksdj ljdfld jflj flj asljd s
-\end{singlespacing}
+
+
+
+
 \newpage
-
-\subsection{cd}
-To move directories up and back use the following commands:
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{cd \ }} \qquad  \qquad \qquad returns you to your login directory
-\item{\bf{cd ..}} \qquad  \qquad \qquad moves you up one directory
-\item{\bf{cd /\ }} \qquad \qquad \qquad takes you to the entire system`s root directory
-\item{\bf{cd /home}} \qquad \qquad takes you to the home directory
-\item{\bf{cd /dir1/subdirfoo}} \qquad this absolute path would take you to subdirfoo
-\end{itemize}
-\end{doublespacing}
-
-\subsection{ls}
-\begin{singlespacing}
-"ls" lists the contents of a directory. To list the different informations of a directory use:
-\end{singlespacing}
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{ls}} \qquad \qquad \qquad list the contents of your home directory
-\item{\bf{ls ..}} \qquad \qquad \qquad list the contents of the parent directory
-\item{\bf{ls /}} \qquad \qquad \qquad lists the contents of your root directory
-\item{\bf{ls -R}} \qquad \qquad \qquad includes the contents of the subdirectories
-\item{\bf{ls -l}} \qquad \qquad\qquad lists the contents with more informations
-\item{\bf{ls -a}} \qquad \qquad \qquad includes directories whose names start with a dot (.).
-\end{itemize}
-\end{doublespacing}
-
-\subsection{pwd}
-\begin{singlespacing}
-"Pwd" means "print working directory", it shows you the directory you are currently in. Normally pwd is just used by itself. But there are two options:
-\end{singlespacing}
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{pwd -L}} \qquad display the logical current working directory.
-\item{\bf{pwd -P}} \qquad display the physical current working directory.
-\end{itemize}
-\end{doublespacing}
-
-\subsection{mkdir}
-\begin{singlespacing}
-The "mkdir" (make directory) is used to make a new directory. There are a few options:
-\end{singlespacing}
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{mkdir}} \qquad creates a new directory within the current directory
-\item{\bf{mkdir -p}} \qquad creates also all directories leading up to the given directory that do not exist already.
-\item{\bf{mkdir -v}} \qquad display each directory that mkdir creates.
-\item{\bf{mkdir -m}} \qquad Set the file permission bits of the newly-created directory to the specified mode value.
-\end{itemize}
-\end{doublespacing}
-
-\subsection{touch}
-\begin{singlespacing}
-The {\bf touch} command changes certain dates for each file argument. By default, touch sets both the date of last file modification and the date of last file access to the current time.
-\end{singlespacing}
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{touch}} \qquad sets the modification time of the fie to the present
-\item{\bf{touch -t}} \qquad specifies a particular time using this format:\newline
-\qquad [cc][yy][MM][dd]hhmm[.ss]. It changes the access and the modification time.
-\item{\bf{touch -a}} \qquad specifies the access time.
-\item{\bf{touch -m}} \qquad specifies the modification time.
-\item{\bf{touch -r}} \qquad for example: touch -r oldfile newfile \newline
-\qquad sets the access and modification time of "newfile" to that of "oldfile".
-\item{\bf{touch -f}} \qquad  attempt to force the update, even if the file permissions do not currently permit it. 
-\item{\bf{touch -c}} \qquad     does not create any files that do not already exist. Normally, touch creates such files.
-\end{itemize}
-\end{doublespacing}
-
-\subsection{mv}
-"mv" (move files) either renames the file or moves it into an existing direcory.
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{mv oldname newname}} \qquad rename the file "oldname" into "newname"
-\item{\bf{mv a b}} \qquad moves the folder "a" into "b", if "b" is an existing directory
-\item{\bf{mv a ../}} \qquad moves "a" one directory up
-\item{\bf{mv a /documents/b}} \qquad moves "a" into "documents" and renames it to "b"
-\end{itemize}
-There are also a few different options for mv:
-\begin{itemize}
-\item{\bf{-i}} \qquad  Cause mv to write a prompt to standard error before moving a file that would overwrite an existing file.
-\item{\bf{-f}} \qquad Do not prompt for confirmation before overwriting the destination path.
-\item{\bf{-n}} \qquad Do not overwrite an existing file.
-\item{\bf{-v}} \qquad  Cause mv to be verbose, showing files after they are moved.
-\end{itemize}
-\end{doublespacing}
-
-\subsection{cp}
-"cp" (copy) can be used to copy files or directories.
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{cp a b}} \qquad copies the file "a" to "b".
-\item{\bf{-a}} \qquad  Preserves structure and attributes of files
-           but not directory structure.
-\item{\bf{-f}} \qquad  If the destination file cannot be opened, remove it and create a
-           new file, without prompting for confirmation regardless of its permissions.
-\item{\bf{-p}} \qquad Cause cp to preserve the following attributes of each source file in the copy: modification time, access time, file flags, file mode,
-           user ID, and group ID, as allowed by permissions.  Access Control
-           Lists (ACLs) and Extended Attributes (EAs), including resource
-           forks, will also be preserved.
-\item{\bf{-R}} \qquad  If the source designates a directory, cp copies the directory and
-           the entire subtree connected at that point.
-\end{itemize}
-\end{doublespacing}
-
-\subsection{rm}
-"rm" (remove) is used to remove files and directories from a filesystem. Options:
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{rm a}} \qquad removes the file "a", to remove more than just one file, just write: rm a b, to remove the file "a" and the file "b".
-\item{\bf{rm -i}} \qquad requests confirmation to delete the file.
-\item{\bf{rm -d}} \qquad  removes directories as well as other types of
-                 files.
-\item{\bf{rm -r}} \qquad removes directories recursively.
-\item{\bf{rm -P}} \qquad overwrites regular files before deleting them. 
-\end{itemize}
-\end{doublespacing}
-
-\subsection{cat}
-“cat“ (concatenate) reads one or more files and prints them to standard output.The operator \verb$ >$ can be used to combine multiple files into one.
-\begin{doublespacing}
-\begin{itemize}
-\item{\bf{cat a}} \qquad prints the file "a".
-\item{\bf{cat a b \verb$>$ c}} \qquad combines file a and b into c and prints it.
-\item{\bf{cat -e}} \qquad display non-printing characters, and display
-             a dollar sign at the end of each line.
-\item{\bf{cat -n}} \qquad number the output lines, starting at 1.
-\end{itemize}
-\end{doublespacing}
 \begin{singlespacing}
 \section{Git}
 Git is a distributed revision control system with an emphasis on speed. Every Git working directory is a full-fledged repository with complete history and full revision tracking capabilities, not dependent on network access or central server.
@@ -534,7 +603,7 @@ GitHub is a web-based hosting service for projects that use the Git revision con
 \item{\bf{git init}} \qquad create an empty git repository or reinitialize an existing one.
 \item{\bf{git add}} \qquad add file contents to the index.
 \item{\bf{git status}} \qquad show the working tree status.
-\item{\bf{git commit}} \qquad record changes to the repository. By adding -m you can leave a message to the changes.
+\item{\bf{git commit}} \qquad record changes to the repository. By adding -a it automatically add changes from all known files.
 \item{\bf{git log}} \qquad show commit history.
 \item{\bf{git show}} \qquad show information on any object.
 \item{\bf{git checkout}} \qquad checkout a branch or paths to the working tree.
